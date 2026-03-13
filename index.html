@@ -9,18 +9,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg:        #080b0f;
-    --surface:   #0d1117;
-    --surface2:  #131920;
-    --border:    rgba(255,255,255,0.07);
-    --border-hi: rgba(255,140,0,0.35);
-    --amber:     #ff8c00;
-    --amber-dim: rgba(255,140,0,0.12);
-    --amber-glow:rgba(255,140,0,0.06);
-    --teal:      #00c4a7;
-    --teal-dim:  rgba(0,196,167,0.1);
-    --text:      #dde3ec;
-    --muted:     #6b7a8d;
+    --bg:        #f5f4f0;
+    --surface:   #ffffff;
+    --surface2:  #f0efe9;
+    --border:    rgba(0,0,0,0.08);
+    --border-hi: rgba(180,90,0,0.25);
+    --amber:     #b45a00;
+    --amber-dim: rgba(180,90,0,0.07);
+    --amber-glow:rgba(180,90,0,0.04);
+    --teal:      #007a69;
+    --teal-dim:  rgba(0,122,105,0.08);
+    --text:      #1a1a18;
+    --muted:     #6b6a62;
     --mono:      'JetBrains Mono', monospace;
     --sans:      'Syne', sans-serif;
   }
@@ -43,8 +43,8 @@
     position: fixed;
     inset: 0;
     background-image:
-      linear-gradient(rgba(255,140,0,0.025) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,140,0,0.025) 1px, transparent 1px);
+      linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,0,0,0.04) 1px, transparent 1px);
     background-size: 48px 48px;
     pointer-events: none;
     z-index: 0;
@@ -58,7 +58,7 @@
     left: -200px;
     width: 700px;
     height: 700px;
-    background: radial-gradient(circle, rgba(255,140,0,0.05) 0%, transparent 65%);
+    background: radial-gradient(circle, rgba(180,90,0,0.05) 0%, transparent 65%);
     pointer-events: none;
     z-index: 0;
   }
@@ -69,7 +69,7 @@
     right: -200px;
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(0,196,167,0.04) 0%, transparent 65%);
+    background: radial-gradient(circle, rgba(0,122,105,0.04) 0%, transparent 65%);
     pointer-events: none;
     z-index: 0;
   }
@@ -109,8 +109,8 @@
     width: 7px;
     height: 7px;
     border-radius: 50%;
-    background: #22c55e;
-    box-shadow: 0 0 8px #22c55e;
+    background: #16a34a;
+    box-shadow: 0 0 6px #16a34a;
     animation: pulse 2s ease-in-out infinite;
   }
 
@@ -166,7 +166,7 @@
     font-weight: 800;
     line-height: 1.05;
     letter-spacing: -0.02em;
-    color: #fff;
+    color: #0f0e0c;
     margin-bottom: 20px;
   }
 
@@ -203,7 +203,7 @@
     font-family: var(--sans);
     font-size: 28px;
     font-weight: 700;
-    color: #fff;
+    color: #0f0e0c;
     line-height: 1;
   }
 
@@ -243,7 +243,7 @@
   }
 
   .arch-diagram {
-    background: var(--surface);
+    background: var(--surface2);
     border: 1px solid var(--border);
     border-radius: 12px;
     padding: 32px;
@@ -266,32 +266,32 @@
   }
 
   .arch-node.internet {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(0,0,0,0.03);
+    border: 1px solid rgba(0,0,0,0.1);
     width: 100px;
   }
 
   .arch-node.lightsail {
-    background: var(--teal-dim);
-    border: 1px solid rgba(0,196,167,0.3);
+    background: rgba(0,122,105,0.08);
+    border: 1px solid rgba(0,122,105,0.25);
     width: 140px;
   }
 
   .arch-node.peering {
-    background: rgba(255,255,255,0.03);
-    border: 1px dashed rgba(255,255,255,0.15);
+    background: rgba(0,0,0,0.02);
+    border: 1px dashed rgba(0,0,0,0.12);
     width: 110px;
   }
 
   .arch-node.vpc {
-    background: var(--amber-glow);
-    border: 1px solid var(--border-hi);
+    background: rgba(180,90,0,0.05);
+    border: 1px solid rgba(180,90,0,0.2);
     width: 120px;
   }
 
   .arch-node.ec2 {
-    background: var(--amber-dim);
-    border: 1px solid var(--border-hi);
+    background: rgba(180,90,0,0.08);
+    border: 1px solid rgba(180,90,0,0.25);
     width: 130px;
   }
 
@@ -305,7 +305,7 @@
     font-family: var(--sans);
     font-size: 12px;
     font-weight: 600;
-    color: #fff;
+    color: #0f0e0c;
     display: block;
   }
 
@@ -330,7 +330,7 @@
   .arch-arrow-line {
     width: 100%;
     height: 1px;
-    background: linear-gradient(90deg, var(--border) 0%, rgba(255,140,0,0.4) 50%, var(--border) 100%);
+    background: linear-gradient(90deg, var(--border) 0%, rgba(180,90,0,0.3) 50%, var(--border) 100%);
     position: relative;
   }
 
@@ -392,7 +392,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse at top left, rgba(255,140,0,0.03), transparent 60%);
+    background: radial-gradient(ellipse at top left, rgba(180,90,0,0.02), transparent 60%);
     pointer-events: none;
   }
 
@@ -420,7 +420,7 @@
     font-family: var(--sans);
     font-size: 20px;
     font-weight: 700;
-    color: #fff;
+    color: #0f0e0c;
     margin-bottom: 12px;
     line-height: 1.2;
   }
@@ -429,7 +429,7 @@
     font-family: var(--sans);
     font-size: 15px;
     font-weight: 600;
-    color: #fff;
+    color: #0f0e0c;
     margin-bottom: 8px;
   }
 
@@ -510,7 +510,7 @@
 
   .cost-table tr:last-child td {
     border-bottom: none;
-    color: #fff;
+    color: #0f0e0c;
     font-weight: 600;
     font-family: var(--sans);
     font-size: 13px;
@@ -617,8 +617,8 @@
 
   /* ── TERMINAL BLOCK ── */
   .terminal {
-    background: #060a0e;
-    border: 1px solid rgba(255,255,255,0.08);
+    background: #f8f7f2;
+    border: 1px solid rgba(0,0,0,0.1);
     border-radius: 8px;
     padding: 16px;
     margin-top: 16px;
@@ -631,7 +631,7 @@
     gap: 6px;
     margin-bottom: 12px;
     padding-bottom: 10px;
-    border-bottom: 1px solid rgba(255,255,255,0.06);
+    border-bottom: 1px solid rgba(0,0,0,0.07);
   }
 
   .term-dot {
@@ -652,9 +652,9 @@
     display: block;
   }
 
-  .term-line .p { color: #22c55e; }
+  .term-line .p { color: #2d7a3a; }
   .term-line .cmd { color: var(--amber); }
-  .term-line .out { color: #6b7a8d; }
+  .term-line .out { color: #999891; }
   .term-line .ok  { color: var(--teal); }
 
   /* ── NEXT STEPS ── */
@@ -684,7 +684,7 @@
     font-family: var(--sans);
     font-size: 13px;
     font-weight: 600;
-    color: #fff;
+    color: #0f0e0c;
     margin-bottom: 4px;
   }
 
@@ -733,10 +733,10 @@
     gap: 7px;
     padding: 6px 12px;
     border-radius: 6px;
-    background: rgba(34,197,94,0.08);
-    border: 1px solid rgba(34,197,94,0.2);
+    background: rgba(22,163,74,0.08);
+    border: 1px solid rgba(22,163,74,0.2);
     font-size: 11px;
-    color: rgba(34,197,94,0.9);
+    color: #15803d;
     letter-spacing: 0.06em;
     font-family: var(--mono);
     margin-top: 16px;
@@ -789,8 +789,8 @@
   }
 
   @keyframes pulse {
-    0%, 100% { opacity: 1; box-shadow: 0 0 8px #22c55e; }
-    50%       { opacity: 0.6; box-shadow: 0 0 3px #22c55e; }
+    0%, 100% { opacity: 1; box-shadow: 0 0 6px #16a34a; }
+    50%       { opacity: 0.6; box-shadow: 0 0 2px #16a34a; }
   }
 
   @keyframes growBar {
@@ -1052,9 +1052,9 @@
       <div class="card-eyebrow">Get in touch</div>
       <h3>Contact</h3>
       <div class="contact-row">
-        <a href="mailto:you@example.com" class="contact-item">
+        <a href="/cdn-cgi/l/email-protection#e59c8a90a5809d8488958980cb868a88" class="contact-item">
           <span class="contact-icon">✉</span>
-          you@example.com
+          <span class="__cf_email__" data-cfemail="fa83958fba9f829b978a969fd4999597">[email&#160;protected]</span>
         </a>
         <a href="https://github.com/your-handle" target="_blank" class="contact-item">
           <span class="contact-icon">⌥</span>
@@ -1079,10 +1079,4 @@
       Served from <code>/var/www/html/index.html</code> · Apache httpd on Amazon EC2 · proxied via Lightsail Nginx
     </div>
     <div class="foot-right">
-      VPC <span>10.0.0.0/16</span> · Subnet <span>10.0.1.0/24</span> · Region <span>us-east-1</span>
-    </div>
-  </footer>
-
-</div>
-</body>
-</html>
+      VPC <span>10.0.0.
